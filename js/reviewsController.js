@@ -5,7 +5,7 @@ var reviewsModule = angular.module('reviewsModule', ["builder"]);
      $scope.ratingsreviewsServiceUrl = Builder.currentWidget.settings.ratingsreviewsServiceUrl;
      Restangular.setBaseUrl($scope.ratingsreviewsServiceUrl);
 
-     Restangular.all("/reviews").getList().then(function (response) {
+     Restangular.all(currentProjectId + "/reviews/").getList().then(function (response) {
          $scope.reviews = Restangular.stripRestangular(response)
      });
  } );
