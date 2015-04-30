@@ -1,0 +1,6 @@
+applications:
+ - name: ratingsreviewsmodule
+   buildpack: https://github.com/cloudfoundry-incubator/staticfile-buildpack.git
+   instances: 1
+   memory: 128M
+   domain: cf3.hybris.com

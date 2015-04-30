@@ -1,0 +1,10 @@
+{
+    "widgets" : [{
+        "id" : "ratingsreviewsmodule",
+        "title" : "ratingsreviewsmodule",
+        "settings" : {
+            "viewUrl" : "index.html",
+            "ratingsreviewsServiceUrl" : "https://api.yaas.io/dopeyhackaton/ratings-reviews/v1"
+        }
+    }]
+}
