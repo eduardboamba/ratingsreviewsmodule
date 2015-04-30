@@ -11,6 +11,7 @@
      <script src="https://builder.yaas.io/public/js/builder.js"></script>
      <script src="https://builder.yaas.io/public/js/builder_editors_v2.js"></script>
      <script src="js/reviewsController.js"></script>
+	 <script src="js/reviewsApprover.js"></script>
      <title>Ratings &amp; Reviews</title>
  </head>
  <body>
@@ -35,6 +36,16 @@
                                  <p>Product: {{review.product}}</p>
                                  <p>Reviewer : {{review.reviewer}}</p>
 								 <p>Rating : {{review.rating}}</p>
+								 
+								 <!-- CUSTOM TOGGLE -->
+								<div class="btn-group" data-toggle="buttons">
+									<label class="btn btn-toggle btn-lg" ng-attr-active = {{review.approved}} ng-href='#here' ng-click='approve(review.id, true)'>
+										<input type="radio" name="options" id="option1"> Approved
+									</label>
+									<label class="btn btn-toggle btn-lg" ng-attr-active = {{!review.approved}} ng-href='#here' ng-click='approve(review.id, false)'>
+										<input type="radio" name="options" id="option2"> Declined
+									</label>
+								</div>
                              </li>
                          </ul>
                      </div>
